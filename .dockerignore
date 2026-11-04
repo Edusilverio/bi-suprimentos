@@ -1,0 +1,12 @@
+node_modules
+.git
+dist
+.output
+.wrangler
+*.log
+.env.local
+.DS_Store
+.vscode
+.idea
+# Obs.: NÃO ignorar o .env — as VITE_* (públicas) são lidas no build.
+# Se o .env não for versionado, o app cai nos fallbacks corretos de src/config/env.ts.

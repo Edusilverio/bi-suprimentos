@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+
+@layer base {
+  :root {
+    /* Atlas brand tokens (não-HSL) */
+    --font-titles: 'Times New Roman', Times, serif;
+    --color-title: #5D7A9A;
+    --color-pink-atlas: #FB2B67;
+    --color-navy-deep:  #1E3A5F;
+    --color-caramel:    #B88746;
+    --color-sage-green: #7A9E7E;
+    --color-blue-slate: #5D7A9A;
+
+
+    --background: 210 14% 96%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 340 85% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 33%;
+
+    --accent: 340 85% 49%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 340 85% 49%;
+    --ring: 340 85% 49%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 12%;
+    --sidebar-primary: 340 85% 49%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 100% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 88%;
+    --sidebar-ring: 340 85% 49%;
+
+    --kpi-active-border: 340 85% 49%;
+    --kpi-active-bg: 340 85% 96%;
+    --kpi-hover-shadow: 0 4px 16px rgba(224, 24, 95, 0.1);
+
+    --chart-1: 340 85% 49%;
+    --chart-2: 340 60% 65%;
+    --chart-3: 200 60% 50%;
+    --chart-4: 142 60% 45%;
+    --chart-5: 280 40% 50%;
+
+    --chart-primary: 340 85% 49%;
+    --chart-secondary: 220 47% 20%;
+    --chart-tertiary: 220 9% 46%;
+    --chart-quaternary: 215 20% 65%;
+    --chart-positive: 158 64% 40%;
+    --chart-warning: 38 92% 50%;
+    --chart-negative: 0 84% 60%;
+
+    --table-even: 0 0% 100%;
+    --table-odd: 0 0% 98%;
+
+    --badge-success-bg: 142 76% 92%;
+    --badge-success-text: 142 72% 29%;
+    --badge-danger-bg: 0 93% 94%;
+    --badge-danger-text: 0 72% 51%;
+    --badge-neutral-bg: 220 14% 96%;
+    --badge-neutral-text: 220 9% 46%;
+
+    --sla-positive: 142 72% 29%;
+    --sla-negative: 0 72% 51%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 340 100% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 340 100% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 340 100% 59%;
+    --ring: 340 100% 59%;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 340 100% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 100% 59%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 340 100% 59%;
+
+    --kpi-active-border: 340 100% 59%;
+    --kpi-active-bg: 340 100% 10%;
+    --kpi-hover-shadow: 0 4px 16px rgba(255, 45, 120, 0.15);
+
+    --chart-1: 340 100% 59%;
+    --chart-2: 340 60% 65%;
+    --chart-3: 200 60% 50%;
+    --chart-4: 142 60% 45%;
+    --chart-5: 280 40% 50%;
+
+    --chart-primary: 340 100% 59%;
+    --chart-secondary: 215 30% 75%;
+    --chart-tertiary: 220 9% 60%;
+    --chart-quaternary: 215 16% 47%;
+    --chart-positive: 158 64% 52%;
+    --chart-warning: 38 92% 60%;
+    --chart-negative: 0 84% 65%;
+
+    --table-even: 0 0% 10%;
+    --table-odd: 0 0% 8%;
+
+    --badge-success-bg: 142 40% 15%;
+    --badge-success-text: 142 69% 58%;
+    --badge-danger-bg: 0 40% 15%;
+    --badge-danger-text: 0 69% 68%;
+    --badge-neutral-bg: 0 0% 16%;
+    --badge-neutral-text: 0 0% 63%;
+
+    --sla-positive: 142 69% 58%;
+    --sla-negative: 0 69% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+    background-color: #F1F3F5;
+  }
+
+  .app-background {
+    background-color: #F1F3F5;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .kpi-card {
+    @apply bg-card rounded-xl border p-4 cursor-pointer;
+    transition: all 0.2s ease;
+  }
+  .kpi-card:hover {
+    box-shadow: var(--kpi-hover-shadow);
+    transform: scale(1.02);
+  }
+  .kpi-card-active {
+    border-color: hsl(var(--kpi-active-border));
+    background-color: hsl(var(--kpi-active-bg));
+    border-width: 2px;
+  }
+  .page-container {
+    @apply flex-1 p-6 overflow-auto;
+  }
+  .filter-bar {
+    @apply flex flex-wrap gap-3 items-center bg-card rounded-xl border p-3 mb-6;
+  }
+  .data-table-wrapper {
+    @apply bg-card rounded-xl border overflow-hidden;
+  }
+  .badge-filter {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium;
+    background-color: hsl(var(--kpi-active-bg));
+    border: 1px solid hsl(var(--kpi-active-border));
+    color: hsl(var(--accent));
+  }
+
+  .title-style {
+    font-family: var(--font-titles);
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+  }
+}
